@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="每天整理國內外氣候變遷與調適新聞的雙主持人 Podcast，由七七乳加巧克力和非雷泡泡糖主持。">
+<meta property="og:title" content="氣候調適日報">
+<meta property="og:description" content="每天整理國內外氣候變遷與調適新聞，點開就能聽。">
+<meta name="theme-color" content="#c2461f">
+<style>*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>氣候調適日報</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 單欄集數清單，最新在上；播放列固定在底部。品牌標記是一條由冷到熱的色帶。 */
+:root {
+  --bg: #eef2f3;
+  --surface: #ffffff;
+  --ink: #17232a;
+  --muted: #5b6b73;
+  --line: #d3dcdf;
+  --accent: #c2461f;
+  --accent-ink: #ffffff;
+  --cool: #1f6f86;
+  --chip: #e2ecef;
+  --font-display: "LXGW WenKai TC", "Kaiti TC", "STKaiti", serif;
+  --font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f171b; --surface: #172227; --ink: #e5edef; --muted: #94a6ad; --line: #2a3a41;
+    --accent: #ef7448; --accent-ink: #1a0d07; --cool: #5fb4cb; --chip: #20313a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f171b; --surface: #172227; --ink: #e5edef; --muted: #94a6ad; --line: #2a3a41;
+  --accent: #ef7448; --accent-ink: #1a0d07; --cool: #5fb4cb; --chip: #20313a; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.7; }
+.wrap { max-width: 720px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 140px; }
+.stripes { display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 18px; }
+.stripes span { flex: 1; }
+header h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 7vw, 42px); line-height: 1.2; margin: 0; letter-spacing: .02em; text-wrap: balance; }
+header p { margin: 6px 0 0; color: var(--muted); max-width: 60ch; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 14px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .04em; }
+.list { display: grid; gap: 14px; margin-top: 28px; }
+.ep { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; display: grid; gap: 10px; min-width: 0; }
+.ep.playing { border-color: var(--accent); }
+.ep-top { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+.play { width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; cursor: pointer; flex: none; }
+.play:hover { filter: brightness(1.08); }
+.play:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--cool); outline-offset: 2px; }
+.play svg { width: 20px; height: 20px; fill: currentColor; }
+.ep-head { min-width: 0; }
+.ep-date { font-family: var(--font-mono); font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+.tag { font-family: var(--font-body); font-size: 11px; padding: 1px 8px; border-radius: 999px; background: var(--chip); color: var(--cool); letter-spacing: .04em; }
+.tag.done { color: var(--muted); }
+.ep h2 { font-family: var(--font-display); font-size: 21px; line-height: 1.35; margin: 2px 0 0; font-weight: 700; text-wrap: balance; }
+.ep ul.hl { margin: 0; padding-left: 1.2em; color: var(--ink); }
+.ep ul.hl li { margin: 2px 0; }
+details { border-top: 1px solid var(--line); padding-top: 8px; }
+summary { cursor: pointer; color: var(--cool); font-weight: 500; font-size: 14px; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "＋ "; }
+details[open] > summary::before { content: "－ "; }
+.script { margin-top: 10px; display: grid; gap: 10px; }
+.line { display: grid; grid-template-columns: 1fr; gap: 0; }
+.who { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .04em; }
+.who.b { color: var(--cool); }
+.line p { margin: 0; min-width: 0; }
+.line.now { background: var(--chip); border-radius: 8px; margin-inline: -8px; padding: 4px 8px; }
+.tts-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.tts-btn { border: 1px solid var(--cool); color: var(--cool); background: transparent; border-radius: 999px; padding: 4px 14px; font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; }
+.tts-btn:hover { background: var(--chip); }
+.tts-note { font-size: 12px; color: var(--muted); min-width: 0; }
+.sources { margin: 10px 0 0; padding-left: 1.2em; font-size: 14px; }
+.sources a { color: var(--cool); word-break: break-word; }
+.sources small { color: var(--muted); }
+.empty { margin-top: 28px; padding: 28px 20px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); text-align: center; }
+.empty strong { display: block; color: var(--ink); font-family: var(--font-display); font-size: 20px; margin-bottom: 4px; }
+
+.player { position: fixed; left: 0; right: 0; bottom: 0; background: var(--surface); border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -6px 20px rgb(0 0 0 / .08); }
+.player-in { max-width: 720px; margin: 0 auto; display: grid; gap: 6px; }
+.p-title { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p-title b { color: var(--ink); font-weight: 500; }
+.p-row { display: flex; align-items: center; gap: 10px; }
+.p-btn { background: transparent; border: 1px solid var(--line); color: var(--ink); border-radius: 999px; height: 34px; min-width: 34px; padding: 0 10px; font-family: var(--font-mono); font-size: 12px; cursor: pointer; display: grid; place-items: center; }
+.p-main { background: var(--accent); color: var(--accent-ink); border: 0; width: 40px; height: 40px; }
+.p-main svg { width: 18px; height: 18px; fill: currentColor; }
+.p-time { font-family: var(--font-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
+@media (max-width: 460px) { .p-skip { display: none; } }
+@media (prefers-reduced-motion: no-preference) { .ep { transition: border-color .2s; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="stripes" aria-hidden="true">
+      <span style="background:#2b5f8a"></span><span style="background:#3f7fa6"></span><span style="background:#7aaec6"></span><span style="background:#b9d3df"></span><span style="background:#f0d8c8"></span><span style="background:#e9a27e"></span><span style="background:#d8693f"></span><span style="background:#b83a1f"></span><span style="background:#8a1f12"></span>
+    </div>
+    <h1>氣候調適日報</h1>
+    <p>每天整理國內外氣候變遷與調適新聞，由七七乳加巧克力和非雷泡泡糖主持，一集約 5–10 分鐘。點選集數即可收聽。</p>
+    <div class="meta-row"><span>每日下午更新</span><span id="count"></span></div>
+  </header>
+
+  <div id="empty" class="empty">
+    <strong>節目載入中</strong>
+    第一集會在這裡出現；之後每天下午兩點前會自動新增一集。
+  </div>
+  <div id="list" class="list" hidden></div>
+</div>
+
+<div class="player" id="player" hidden>
+  <div class="player-in">
+    <div class="p-title" id="p-title"></div>
+    <div class="p-row">
+      <button class="p-btn p-skip" id="back" type="button" aria-label="倒退 15 秒">−15</button>
+      <button class="p-btn p-main" id="toggle" type="button" aria-label="播放或暫停"></button>
+      <button class="p-btn p-skip" id="fwd" type="button" aria-label="快轉 15 秒">+15</button>
+      <input type="range" id="seek" min="0" max="100" step="0.1" value="0" aria-label="播放進度">
+      <span class="p-time" id="time">0:00 / 0:00</span>
+      <button class="p-btn" id="rate" type="button" aria-label="播放速度">1×</button>
+    </div>
+  </div>
+</div>
+<audio id="audio" preload="metadata"></audio>
+
+<script>
+(function () {
+  const PLAY = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+  const PAUSE = '<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+  const $ = (id) => document.getElementById(id);
+  const HOSTS = { A: "七七乳加巧克力", B: "非雷泡泡糖" };
+  const audio = $("audio");
+  let episodes = [];
+  let current = null;
+  const rates = [1, 1.25, 1.5, 0.9];
+  let rateIdx = 0;
+
+  function store(get, key, val) {
+    try { if (get) return JSON.parse(localStorage.getItem(key) || "null"); localStorage.setItem(key, JSON.stringify(val)); } catch (e) { return null; }
+  }
+  let heard = store(true, "heard") || {};
+
+  const fmt = (s) => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+  const dateLabel = (d) => { const p = String(d || "").split("-"); return p.length === 3 ? `${p[0]}/${p[1]}/${p[2]}` : d; };
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+
+  function render() {
+    const list = $("list");
+    list.replaceChildren();
+    $("empty").hidden = episodes.length > 0;
+    list.hidden = episodes.length === 0;
+    $("count").textContent = episodes.length ? `共 ${episodes.length} 集` : "";
+    for (const ep of episodes) {
+      const card = el("article", "ep" + (current && current.id === ep.id ? " playing" : ""));
+      const top = el("div", "ep-top");
+      const btn = el("button", "play");
+      btn.type = "button";
+      const isPlaying = current && current.id === ep.id && !audio.paused;
+      btn.innerHTML = isPlaying ? PAUSE : PLAY;
+      btn.setAttribute("aria-label", (isPlaying ? "暫停 " : "播放 ") + (ep.title || ""));
+      btn.disabled = !ep.audio;
+      btn.dataset.id = ep.id;
+      card.dataset.id = ep.id;
+      btn.addEventListener("click", () => playEp(ep));
+      const head = el("div", "ep-head");
+      const meta = el("div", "ep-date");
+      meta.append(el("span", null, dateLabel(ep.date)));
+      if (ep.duration) meta.append(el("span", null, fmt(ep.duration)));
+      if (ep.pilot) meta.append(el("span", "tag", "試播"));
+      if (heard[ep.id]) meta.append(el("span", "tag done", "已聽"));
+      head.append(meta, el("h2", null, ep.title || "氣候調適日報"));
+      top.append(btn, head);
+      card.append(top);
+
+      if (Array.isArray(ep.highlights) && ep.highlights.length) {
+        const ul = el("ul", "hl");
+        ep.highlights.forEach((h) => ul.append(el("li", null, h)));
+        card.append(ul);
+      }
+      if (Array.isArray(ep.transcript) && ep.transcript.length && "speechSynthesis" in window) {
+        const row = el("div", "tts-row");
+        const tb = el("button", "tts-btn", reading && reading.id === ep.id ? "停止朗讀" : "臺灣男聲朗讀");
+        tb.type = "button";
+        tb.dataset.tts = ep.id;
+        tb.addEventListener("click", () => toggleRead(ep, card));
+        const note = el("span", "tts-note", reading && reading.id === ep.id ? readNote : "用這台裝置的臺灣中文語音即時朗讀逐字稿");
+        note.dataset.ttsNote = ep.id;
+        row.append(tb, note);
+        card.append(row);
+      }
+      if (Array.isArray(ep.transcript) && ep.transcript.length) {
+        const d = el("details");
+        d.append(el("summary", null, "逐字稿"));
+        const box = el("div", "script");
+        ep.transcript.forEach((t, i) => {
+          const row = el("div", "line");
+          row.dataset.idx = i;
+          row.append(el("span", "who" + (t.host === "B" ? " b" : ""), HOSTS[t.host] || ("主持人" + (t.host || ""))), el("p", null, t.text));
+          box.append(row);
+        });
+        d.append(box);
+        card.append(d);
+      }
+      if (Array.isArray(ep.sources) && ep.sources.length) {
+        const d = el("details");
+        d.append(el("summary", null, `新聞來源（${ep.sources.length}）`));
+        const ol = el("ol", "sources");
+        ep.sources.forEach((s) => {
+          const li = el("li");
+          const a = el("a", null, s.title || s.url);
+          if (/^https?:\/\//.test(s.url || "")) { a.href = s.url; a.target = "_blank"; a.rel = "noopener"; }
+          li.append(a);
+          const extra = [s.outlet, s.date].filter(Boolean).join("，");
+          if (extra) li.append(el("small", null, `　${extra}`));
+          ol.append(li);
+        });
+        d.append(ol);
+        card.append(d);
+      }
+      list.append(card);
+    }
+  }
+
+  /* ---- 裝置語音朗讀（臺灣腔）---- */
+  let reading = null, readNote = "", readIdx = 0, readVoice = null;
+  const synth = window.speechSynthesis;
+  function getVoices() { try { return synth ? synth.getVoices() : []; } catch (e) { return []; } }
+  if (synth && "onvoiceschanged" in synth) synth.onvoiceschanged = () => {};
+  function pickVoice() {
+    const vs = getVoices();
+    const tw = vs.filter((v) => /zh[-_]TW|cmn[-_]TW/i.test(v.lang) || /Taiwan|臺灣|台灣/i.test(v.name));
+    const male = tw.find((v) => /YunJhe|Yun ?Jhe|雲哲|云哲|Zhiwei|志偉|Male|男/i.test(v.name));
+    return { male: male || null, any: tw[0] || null };
+  }
+  function setNote(id, text) {
+    readNote = text;
+    const n = document.querySelector(`[data-tts-note="${id}"]`);
+    if (n) n.textContent = text;
+  }
+  function setBtn(id, on) {
+    const b = document.querySelector(`[data-tts="${id}"]`);
+    if (b) b.textContent = on ? "停止朗讀" : "臺灣男聲朗讀";
+  }
+  function markLine(card, idx) {
+    if (!card) return;
+    card.querySelectorAll(".line.now").forEach((r) => r.classList.remove("now"));
+    const r = card.querySelector(`.line[data-idx="${idx}"]`);
+    if (r) r.classList.add("now");
+  }
+  function stopRead() {
+    if (!reading) return;
+    const id = reading.id;
+    reading = null;
+    try { synth.cancel(); } catch (e) {}
+    setBtn(id, false);
+    setNote(id, "用這台裝置的臺灣中文語音即時朗讀逐字稿");
+    document.querySelectorAll(".line.now").forEach((r) => r.classList.remove("now"));
+  }
+  function speakNext(ep) {
+    if (!reading || reading.id !== ep.id) return;
+    const card = document.querySelector(`.ep[data-id="${ep.id}"]`);
+    if (readIdx >= ep.transcript.length) { stopRead(); heard[ep.id] = true; store(false, "heard", heard); return; }
+    const t = ep.transcript[readIdx];
+    const u = new SpeechSynthesisUtterance(t.text);
+    u.voice = readVoice; u.lang = readVoice ? readVoice.lang : "zh-TW";
+    u.rate = rates[rateIdx] * 1.05;
+    u.pitch = t.host === "B" ? 1.15 : 0.95;
+    u.onend = () => { if (reading && reading.id === ep.id) { readIdx++; speakNext(ep); } };
+    u.onerror = (e) => { if (reading && e.error !== "interrupted" && e.error !== "canceled") { setNote(ep.id, "朗讀中斷，請再按一次"); stopRead(); } };
+    markLine(card, readIdx);
+    setNote(ep.id, `${HOSTS[t.host] || ""}　第 ${readIdx + 1}/${ep.transcript.length} 段　聲音：${readVoice ? readVoice.name : "預設"}`);
+    synth.speak(u);
+  }
+  function toggleRead(ep, card) {
+    if (reading && reading.id === ep.id) { stopRead(); return; }
+    stopRead();
+    if (!audio.paused) audio.pause();
+    const v = pickVoice();
+    if (!v.male && !v.any) {
+      setNote(ep.id, "這台裝置沒有臺灣中文語音。請改用電腦版 Microsoft Edge 開啟這個頁面。");
+      return;
+    }
+    readVoice = v.male || v.any;
+    reading = ep; readIdx = 0;
+    setBtn(ep.id, true);
+    const det = card.querySelector("details");
+    if (det) det.open = true;
+    if (!v.male) setNote(ep.id, "這台裝置只有臺灣女聲，先用女聲朗讀；電腦版 Edge 有臺灣男聲「雲哲」。");
+    speakNext(ep);
+  }
+
+  function playEp(ep) {
+    if (!ep.audio) return;
+    stopRead();
+    const src = ep.audio;
+    if (current && current.id === ep.id && audio.getAttribute("src") === src) { audio.paused ? audio.play() : audio.pause(); return; }
+    current = ep;
+    audio.src = src;
+    audio.playbackRate = rates[rateIdx];
+    const saved = store(true, "pos:" + ep.id);
+    audio.addEventListener("loadedmetadata", function once() {
+      audio.removeEventListener("loadedmetadata", once);
+      if (saved && saved < audio.duration - 5) audio.currentTime = saved;
+    });
+    audio.play().catch(() => {});
+    $("player").hidden = false;
+    const t = $("p-title"); t.replaceChildren(el("b", null, ep.title || ""), document.createTextNode("　" + dateLabel(ep.date)));
+    syncPlayer();
+  }
+
+  function syncPlayer() {
+    $("toggle").innerHTML = audio.paused ? PLAY : PAUSE;
+    document.querySelectorAll(".ep").forEach((c) => {
+      const on = current && c.dataset.id === current.id;
+      c.classList.toggle("playing", !!on);
+      const b = c.querySelector(".play");
+      if (b) b.innerHTML = on && !audio.paused ? PAUSE : PLAY;
+    });
+  }
+  audio.addEventListener("play", () => { stopRead(); syncPlayer(); });
+  audio.addEventListener("pause", syncPlayer);
+  let lastSave = 0;
+  audio.addEventListener("timeupdate", () => {
+    const d = audio.duration || 0;
+    $("seek").value = d ? (audio.currentTime / d) * 100 : 0;
+    $("time").textContent = `${fmt(audio.currentTime)} / ${fmt(d)}`;
+    if (current && Date.now() - lastSave > 5000) { lastSave = Date.now(); store(false, "pos:" + current.id, audio.currentTime); }
+  });
+  audio.addEventListener("ended", () => {
+    if (current) { heard[current.id] = true; store(false, "heard", heard); store(false, "pos:" + current.id, 0); }
+    render();
+    syncPlayer();
+  });
+  $("toggle").addEventListener("click", () => { if (current) audio.paused ? audio.play() : audio.pause(); });
+  $("back").addEventListener("click", () => { audio.currentTime = Math.max(0, audio.currentTime - 15); });
+  $("fwd").addEventListener("click", () => { audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 15); });
+  $("seek").addEventListener("input", (e) => { if (audio.duration) audio.currentTime = (e.target.value / 100) * audio.duration; });
+  $("rate").addEventListener("click", () => { rateIdx = (rateIdx + 1) % rates.length; audio.playbackRate = rates[rateIdx]; $("rate").textContent = rates[rateIdx] + "×"; });
+
+  async function start() {
+    try {
+      const r = await fetch("episodes.json?t=" + Date.now(), { cache: "no-store" });
+      const data = await r.json();
+      episodes = (data.episodes || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      render();
+    } catch (e) {
+      $("empty").replaceChildren(el("strong", null, "節目清單暫時無法載入"), document.createTextNode("請稍後重新整理頁面。"));
+    }
+  }
+  start();
+})();
+</script>
+
+</body>
+</html>
