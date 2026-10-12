@@ -58,6 +58,12 @@ header p { margin: 6px 0 0; color: var(--muted); max-width: 60ch; }
 .tag { font-family: var(--font-body); font-size: 11px; padding: 1px 8px; border-radius: 999px; background: var(--chip); color: var(--cool); letter-spacing: .04em; }
 .tag.done { color: var(--muted); }
 .ep h2 { font-family: var(--font-display); font-size: 21px; line-height: 1.35; margin: 2px 0 0; font-weight: 700; text-wrap: balance; }
+.prog { display: flex; align-items: center; gap: 10px; }
+.cbar { flex: 1; min-width: 0; height: 6px; margin: 8px 0; -webkit-appearance: none; appearance: none; border-radius: 999px; background: linear-gradient(to right, var(--accent) var(--p, 0%), var(--line) var(--p, 0%)); cursor: pointer; }
+.cbar::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--accent); }
+.cbar::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); }
+.cbar:disabled { opacity: .5; cursor: default; }
+.ctime { font-family: var(--font-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .ep ul.hl { margin: 0; padding-left: 1.2em; color: var(--ink); }
 .ep ul.hl li { margin: 2px 0; }
 details { border-top: 1px solid var(--line); padding-top: 8px; }
@@ -177,6 +183,21 @@ input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
       head.append(meta, el("h2", null, ep.title || "氣候調適日報"));
       top.append(btn, head);
       card.append(top);
+      {
+        const pr = el("div", "prog");
+        const total = ep.duration || 0;
+        const pos = (current && current.id === ep.id) ? audio.currentTime : (store(true, "pos:" + ep.id) || 0);
+        const bar = el("input", "cbar");
+        bar.type = "range"; bar.min = "0"; bar.max = "1000"; bar.step = "1";
+        bar.value = total ? String(Math.round(Math.min(pos / total, 1) * 1000)) : "0";
+        bar.setAttribute("aria-label", "本集播放進度");
+        bar.disabled = !ep.audio;
+        bar.style.setProperty("--p", (bar.value / 10) + "%");
+        bar.addEventListener("input", () => seekEp(ep, bar.value / 1000));
+        const lab = el("span", "ctime", `${fmt(pos)} / ${fmt(total)}`);
+        pr.append(bar, lab);
+        card.append(pr);
+      }
 
       if (Array.isArray(ep.highlights) && ep.highlights.length) {
         const ul = el("ul", "hl");
@@ -314,6 +335,22 @@ input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
     syncPlayer();
   }
 
+  function seekEp(ep, frac) {
+    if (current && current.id === ep.id && audio.duration) { audio.currentTime = frac * audio.duration; return; }
+    const total = ep.duration || 0;
+    store(false, "pos:" + ep.id, frac * total);
+    playEp(ep);
+  }
+  function updateCardBar() {
+    if (!current) return;
+    const c = document.querySelector(`.ep[data-id="${current.id}"]`);
+    if (!c) return;
+    const d = audio.duration || current.duration || 0;
+    const bar = c.querySelector(".cbar"), lab = c.querySelector(".ctime");
+    if (bar && document.activeElement !== bar) { bar.value = d ? Math.round((audio.currentTime / d) * 1000) : 0; bar.style.setProperty("--p", (bar.value / 10) + "%"); }
+    if (lab) lab.textContent = `${fmt(audio.currentTime)} / ${fmt(d)}`;
+  }
+
   function syncPlayer() {
     $("toggle").innerHTML = audio.paused ? PLAY : PAUSE;
     document.querySelectorAll(".ep").forEach((c) => {
@@ -330,6 +367,7 @@ input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
     const d = audio.duration || 0;
     $("seek").value = d ? (audio.currentTime / d) * 100 : 0;
     $("time").textContent = `${fmt(audio.currentTime)} / ${fmt(d)}`;
+    updateCardBar();
     if (current && Date.now() - lastSave > 5000) { lastSave = Date.now(); store(false, "pos:" + current.id, audio.currentTime); }
   });
   audio.addEventListener("ended", () => {
