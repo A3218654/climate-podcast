@@ -204,17 +204,6 @@ input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
         ep.highlights.forEach((h) => ul.append(el("li", null, h)));
         card.append(ul);
       }
-      if (Array.isArray(ep.transcript) && ep.transcript.length && "speechSynthesis" in window) {
-        const row = el("div", "tts-row");
-        const tb = el("button", "tts-btn", reading && reading.id === ep.id ? "停止朗讀" : "臺灣男聲朗讀");
-        tb.type = "button";
-        tb.dataset.tts = ep.id;
-        tb.addEventListener("click", () => toggleRead(ep, card));
-        const note = el("span", "tts-note", reading && reading.id === ep.id ? readNote : "用這台裝置的臺灣中文語音即時朗讀逐字稿");
-        note.dataset.ttsNote = ep.id;
-        row.append(tb, note);
-        card.append(row);
-      }
       if (Array.isArray(ep.transcript) && ep.transcript.length) {
         const d = el("details");
         d.append(el("summary", null, "逐字稿"));
