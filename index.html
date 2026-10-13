@@ -57,6 +57,7 @@ header p { margin: 6px 0 0; color: var(--muted); max-width: 60ch; }
 .ep-date { font-family: var(--font-mono); font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
 .tag { font-family: var(--font-body); font-size: 11px; padding: 1px 8px; border-radius: 999px; background: var(--chip); color: var(--cool); letter-spacing: .04em; }
 .tag.done { color: var(--muted); }
+.plays { font-variant-numeric: tabular-nums; }
 .ep h2 { font-family: var(--font-display); font-size: 21px; line-height: 1.35; margin: 2px 0 0; font-weight: 700; text-wrap: balance; }
 .prog { display: flex; align-items: center; gap: 10px; }
 .cbar { flex: 1; min-width: 0; height: 6px; margin: 8px 0; -webkit-appearance: none; appearance: none; border-radius: 999px; background: linear-gradient(to right, var(--accent) var(--p, 0%), var(--line) var(--p, 0%)); cursor: pointer; }
@@ -152,6 +153,33 @@ input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
   }
   let heard = store(true, "heard") || {};
 
+  /* ---- 播放次數（Abacus 免費計數服務；同一個瀏覽器同一集只算一次；服務掛掉時不顯示）---- */
+  const COUNTER = "https://abacus.jasoncameron.dev";
+  const NS = "a3218654-climate-podcast";
+  const plays = {};
+  function showPlays(id) {
+    const n = plays[id];
+    document.querySelectorAll(`[data-plays="${id}"]`).forEach((s) => { s.textContent = `▶ ${n} 次播放`; s.hidden = n == null; });
+  }
+  async function loadPlays() {
+    await Promise.all(episodes.map(async (ep) => {
+      try {
+        const r = await fetch(`${COUNTER}/get/${NS}/ep-${ep.id}`);
+        if (r.status === 404) plays[ep.id] = 0;
+        else if (r.ok) plays[ep.id] = (await r.json()).value;
+        showPlays(ep.id);
+      } catch (e) {}
+    }));
+  }
+  async function countPlay(ep) {
+    if (store(true, "counted:" + ep.id)) return;
+    store(false, "counted:" + ep.id, true);
+    try {
+      const r = await fetch(`${COUNTER}/hit/${NS}/ep-${ep.id}`);
+      if (r.ok) { plays[ep.id] = (await r.json()).value; showPlays(ep.id); }
+    } catch (e) {}
+  }
+
   const fmt = (s) => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
   const dateLabel = (d) => { const p = String(d || "").split("-"); return p.length === 3 ? `${p[0]}/${p[1]}/${p[2]}` : d; };
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
@@ -180,6 +208,10 @@ input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
       if (ep.duration) meta.append(el("span", null, fmt(ep.duration)));
       if (ep.pilot) meta.append(el("span", "tag", "試播"));
       if (heard[ep.id]) meta.append(el("span", "tag done", "已聽"));
+      const pc = el("span", "plays", plays[ep.id] != null ? `▶ ${plays[ep.id]} 次播放` : "");
+      pc.dataset.plays = ep.id;
+      pc.hidden = plays[ep.id] == null;
+      meta.append(pc);
       head.append(meta, el("h2", null, ep.title || "氣候調適日報"));
       top.append(btn, head);
       card.append(top);
@@ -318,6 +350,10 @@ input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
       audio.removeEventListener("loadedmetadata", once);
       if (saved && saved < audio.duration - 5) audio.currentTime = saved;
     });
+    audio.addEventListener("playing", function counted() {
+      audio.removeEventListener("playing", counted);
+      if (current && current.id === ep.id) countPlay(ep);
+    });
     audio.play().catch(() => {});
     $("player").hidden = false;
     const t = $("p-title"); t.replaceChildren(el("b", null, ep.title || ""), document.createTextNode("　" + dateLabel(ep.date)));
@@ -376,6 +412,7 @@ input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
       const data = await r.json();
       episodes = (data.episodes || []).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
       render();
+      loadPlays();
     } catch (e) {
       $("empty").replaceChildren(el("strong", null, "節目清單暫時無法載入"), document.createTextNode("請稍後重新整理頁面。"));
     }
