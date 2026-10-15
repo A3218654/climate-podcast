@@ -539,13 +539,58 @@
   },
   {
    "date": "2026-10-14",
-   "title": "六都13位參選人簽韌性城市承諾、聖嬰掀全球霾害洪災",
-   "pilot": false,
+   "duration": 378,
    "highlights": [
     "六都23位市長參選人中13位簽署9個公民團體發起的永續韌性城市承諾，2位不簽",
     "東北季風讓關西降到14.9度，熱帶性低氣壓可能升格薔琵颱風，直接影響臺灣機會不高",
     "超強聖嬰引發印尼霾害、泰國洪災71死，布魯塞爾4萬5千人上街要求加強氣候行動"
    ],
+   "pilot": false,
+   "sources": [
+    {
+     "date": "2026/10/14",
+     "outlet": "壹蘋新聞網",
+     "title": "今冷剩14.9℃ 下波東北季風更強！「薔琵颱風」估週末生成",
+     "url": "https://news.nextapple.com/life/20261014/0833B29F2A523B1B25B3A7933CC47E10"
+    },
+    {
+     "date": "2026/10/14",
+     "outlet": "聯合新聞網",
+     "title": "熱帶性低氣壓生成 最快今晚形成薔琵颱風 專家估將又大又強恐直撲日本",
+     "url": "https://udn.com/news/story/7266/9813301"
+    },
+    {
+     "date": "2026/10/13",
+     "outlet": "環境資訊中心",
+     "title": "氣候調適、防災韌性獲跨黨派關注 六都13名參選人簽「永續韌性城市」承諾",
+     "url": "https://www.e-info.org.tw/node/243963"
+    },
+    {
+     "date": "2026/10/12",
+     "outlet": "綠色公民行動聯盟",
+     "title": "六都13位市長候選人跨黨派響應 永續韌性城市政策承諾發布簽署結果",
+     "url": "https://gcaa.org.tw/16804/"
+    },
+    {
+     "date": "2026/10/12",
+     "outlet": "聯合新聞網",
+     "title": "從高溫上課到居住降溫 國泰金攜青年思辨氣候調適",
+     "url": "https://udn.com/news/story/7239/9809995"
+    },
+    {
+     "date": "2026/10/13",
+     "outlet": "馬尼拉時報",
+     "title": "El Niño Watch: the impacts around the world this week",
+     "url": "https://www.manilatimes.net/2026/10/13/world/asia-oceania/el-nio-watch-the-impacts-around-the-world-this-week/2444812"
+    },
+    {
+     "date": "2026/10/12",
+     "outlet": "聯合新聞網",
+     "title": "布魯塞爾數萬人走上街頭 籲加強氣候行動",
+     "url": "https://udn.com/news/story/6809/9808906"
+    }
+   ],
+   "title": "六都13位參選人簽韌性城市承諾、聖嬰掀全球霾害洪災",
    "transcript": [
     {
      "host": "A",
@@ -1016,51 +1061,6 @@
      "text": "掰掰！"
     }
    ],
-   "sources": [
-    {
-     "title": "今冷剩14.9℃ 下波東北季風更強！「薔琵颱風」估週末生成",
-     "outlet": "壹蘋新聞網",
-     "date": "2026/10/14",
-     "url": "https://news.nextapple.com/life/20261014/0833B29F2A523B1B25B3A7933CC47E10"
-    },
-    {
-     "title": "熱帶性低氣壓生成 最快今晚形成薔琵颱風 專家估將又大又強恐直撲日本",
-     "outlet": "聯合新聞網",
-     "date": "2026/10/14",
-     "url": "https://udn.com/news/story/7266/9813301"
-    },
-    {
-     "title": "氣候調適、防災韌性獲跨黨派關注 六都13名參選人簽「永續韌性城市」承諾",
-     "outlet": "環境資訊中心",
-     "date": "2026/10/13",
-     "url": "https://www.e-info.org.tw/node/243963"
-    },
-    {
-     "title": "六都13位市長候選人跨黨派響應 永續韌性城市政策承諾發布簽署結果",
-     "outlet": "綠色公民行動聯盟",
-     "date": "2026/10/12",
-     "url": "https://gcaa.org.tw/16804/"
-    },
-    {
-     "title": "從高溫上課到居住降溫 國泰金攜青年思辨氣候調適",
-     "outlet": "聯合新聞網",
-     "date": "2026/10/12",
-     "url": "https://udn.com/news/story/7239/9809995"
-    },
-    {
-     "title": "El Niño Watch: the impacts around the world this week",
-     "outlet": "馬尼拉時報",
-     "date": "2026/10/13",
-     "url": "https://www.manilatimes.net/2026/10/13/world/asia-oceania/el-nio-watch-the-impacts-around-the-world-this-week/2444812"
-    },
-    {
-     "title": "布魯塞爾數萬人走上街頭 籲加強氣候行動",
-     "outlet": "聯合新聞網",
-     "date": "2026/10/12",
-     "url": "https://udn.com/news/story/6809/9808906"
-    }
-   ],
-   "duration": 394,
    "id": "20261014",
    "audio": "audio/climate-podcast-20261014.mp3"
   },
