@@ -2,13 +2,64 @@
  "episodes": [
   {
    "date": "2026-10-15",
-   "title": "地球生命徵象7項破紀錄、薔琵颱風生成在即、財長要把調適算進債務",
-   "pilot": false,
+   "duration": 377,
    "highlights": [
     "氣候現況報告指出地球16項生命徵象有7項破紀錄，近年每10年升溫0.36度",
     "薔琵颱風今明生成、週末可達中颱上限，下週北轉，對臺灣影響小但下週三起防長浪",
     "財政部長氣候行動聯盟在曼谷提議把調適投資效益算進債務評估；九環團呼籲調適預算依風險排序"
    ],
+   "pilot": false,
+   "sources": [
+    {
+     "date": "2026/10/14",
+     "outlet": "自由時報",
+     "title": "薔琵颱風最快今生成！週末增強到中颱上限 估下週一、二北轉",
+     "url": "https://news.ltn.com.tw/news/life/breakingnews/5606273"
+    },
+    {
+     "date": "2026/10/15",
+     "outlet": "蕃新聞",
+     "title": "台南區農改場辦氣候變遷研討會 探討作物病蟲害與農業防災調適",
+     "url": "https://n.yam.com/Article/20261015523151"
+    },
+    {
+     "date": "2026/10/14",
+     "outlet": "環境資訊中心",
+     "title": "全台首例竹林碳匯專案通過審查等環境快訊",
+     "url": "https://www.e-info.org.tw/node/243967"
+    },
+    {
+     "date": "2026/10/14",
+     "outlet": "TIME",
+     "title": "Climate Change Is Accelerating Faster Than We Can Respond, Scientists Warn",
+     "url": "https://time.com/article/2026/10/14/climate-change-accelerating-study/"
+    },
+    {
+     "date": "2026/10/14",
+     "outlet": "CBS News",
+     "title": "Climate change pushed Earth to its limits in 2026 as certain vital signs reach record extremes",
+     "url": "https://www.cbsnews.com/news/climate-change-earth-limits-2026-research/"
+    },
+    {
+     "date": "2026/10/15",
+     "outlet": "allAfrica",
+     "title": "Musasizi Urges Finance Ministers to Protect Climate Funding Amid Global Energy Crisis",
+     "url": "https://allafrica.com/stories/202610150075.html"
+    },
+    {
+     "date": "2026/10/13",
+     "outlet": "環境資訊中心",
+     "title": "我們不會離開家園 聯合國首份海平面上升宣言保障國土淹沒後的權利",
+     "url": "https://www.e-info.org.tw/node/243962"
+    },
+    {
+     "date": "2026/10/2",
+     "outlet": "綠色公民行動聯盟等九團體",
+     "title": "聯合聲明：未建立具體風險目標，六千三百億調適預算恐難打造韌性家園",
+     "url": "https://gcaa.org.tw/16788/"
+    }
+   ],
+   "title": "地球生命徵象7項破紀錄、薔琵颱風生成在即、財長要把調適算進債務",
    "transcript": [
     {
      "host": "A",
@@ -483,57 +534,6 @@
      "text": "掰掰！"
     }
    ],
-   "sources": [
-    {
-     "title": "薔琵颱風最快今生成！週末增強到中颱上限 估下週一、二北轉",
-     "outlet": "自由時報",
-     "date": "2026/10/14",
-     "url": "https://news.ltn.com.tw/news/life/breakingnews/5606273"
-    },
-    {
-     "title": "台南區農改場辦氣候變遷研討會 探討作物病蟲害與農業防災調適",
-     "outlet": "蕃新聞",
-     "date": "2026/10/15",
-     "url": "https://n.yam.com/Article/20261015523151"
-    },
-    {
-     "title": "全台首例竹林碳匯專案通過審查等環境快訊",
-     "outlet": "環境資訊中心",
-     "date": "2026/10/14",
-     "url": "https://www.e-info.org.tw/node/243967"
-    },
-    {
-     "title": "Climate Change Is Accelerating Faster Than We Can Respond, Scientists Warn",
-     "outlet": "TIME",
-     "date": "2026/10/14",
-     "url": "https://time.com/article/2026/10/14/climate-change-accelerating-study/"
-    },
-    {
-     "title": "Climate change pushed Earth to its limits in 2026 as certain vital signs reach record extremes",
-     "outlet": "CBS News",
-     "date": "2026/10/14",
-     "url": "https://www.cbsnews.com/news/climate-change-earth-limits-2026-research/"
-    },
-    {
-     "title": "Musasizi Urges Finance Ministers to Protect Climate Funding Amid Global Energy Crisis",
-     "outlet": "allAfrica",
-     "date": "2026/10/15",
-     "url": "https://allafrica.com/stories/202610150075.html"
-    },
-    {
-     "title": "我們不會離開家園 聯合國首份海平面上升宣言保障國土淹沒後的權利",
-     "outlet": "環境資訊中心",
-     "date": "2026/10/13",
-     "url": "https://www.e-info.org.tw/node/243962"
-    },
-    {
-     "title": "聯合聲明：未建立具體風險目標，六千三百億調適預算恐難打造韌性家園",
-     "outlet": "綠色公民行動聯盟等九團體",
-     "date": "2026/10/2",
-     "url": "https://gcaa.org.tw/16788/"
-    }
-   ],
-   "duration": 372,
    "id": "20261015",
    "audio": "audio/climate-podcast-20261015.mp3"
   },
