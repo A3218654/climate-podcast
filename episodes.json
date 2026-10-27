@@ -1,6 +1,571 @@
 {
  "episodes": [
   {
+   "date": "2026-10-27",
+   "title": "年度大潮防海水倒灌、歐洲熱死亡破5萬、調適基金挺尼泊爾預警",
+   "pilot": false,
+   "highlights": [
+    "年度大潮10月26到30日，雲林沿海、金門、馬祖要防海水倒灌；東北季風兩波接力，南北溫差大",
+    "高雄環團指空品一年逾200天不合格，呼籲候選人承諾一年沒改善就不連任，並保留橋頭糖廠森林",
+    "研究估歐洲今夏854城逾5萬人熱死、約三分之二歸因氣候變遷；調適基金通過尼泊爾3項提案含喜馬拉雅預警"
+   ],
+   "transcript": [
+    {
+     "host": "A",
+     "text": "嗨大家好，我是七七乳加巧克力！"
+    },
+    {
+     "host": "B",
+     "text": "我是非雷泡泡糖！巧克力，今天早上是不是有點涼？"
+    },
+    {
+     "host": "A",
+     "text": "對啊，我出門還在想要不要帶外套。"
+    },
+    {
+     "host": "B",
+     "text": "東北季風來了嘛，終於有秋天的感覺。"
+    },
+    {
+     "host": "A",
+     "text": "先說一下，剛過完週末，新聞比較少。"
+    },
+    {
+     "host": "B",
+     "text": "所以今天我們把範圍放寬到最近3天喔。"
+    },
+    {
+     "host": "A",
+     "text": "好，今天重點有哪些？"
+    },
+    {
+     "host": "B",
+     "text": "第一，這禮拜是年度大潮，沿海要防海水倒灌。"
+    },
+    {
+     "host": "A",
+     "text": "第二，高雄有環團喊話市長候選人。"
+    },
+    {
+     "host": "B",
+     "text": "第三，歐洲今年夏天熱死超過5萬人。"
+    },
+    {
+     "host": "A",
+     "text": "哇，這數字好嚇人。"
+    },
+    {
+     "host": "B",
+     "text": "最後還有調適基金挺尼泊爾，跟各地的豪雨。"
+    },
+    {
+     "host": "A",
+     "text": "那我們先從臺灣開始。"
+    },
+    {
+     "host": "B",
+     "text": "巧克力，你知道「大潮」是什麼嗎？"
+    },
+    {
+     "host": "A",
+     "text": "就是潮水特別高的那幾天吧？"
+    },
+    {
+     "host": "B",
+     "text": "對，氣象署說10月26日到30日是年度大潮。"
+    },
+    {
+     "host": "A",
+     "text": "所以剛好就是這禮拜。"
+    },
+    {
+     "host": "B",
+     "text": "滿潮的時候水位可能偏高。"
+    },
+    {
+     "host": "A",
+     "text": "哪些地方要特別注意？"
+    },
+    {
+     "host": "B",
+     "text": "雲林沿海、金門跟馬祖被點名。"
+    },
+    {
+     "host": "A",
+     "text": "雲林我有印象，以前就淹過。"
+    },
+    {
+     "host": "B",
+     "text": "對啊，2023年颱風碰上大潮，口湖那邊就海水倒灌。"
+    },
+    {
+     "host": "A",
+     "text": "那時候漁港旁邊都泡水了。"
+    },
+    {
+     "host": "B",
+     "text": "所以低窪地區要小心積淹水。"
+    },
+    {
+     "host": "A",
+     "text": "車子不要停太靠海邊比較保險。"
+    },
+    {
+     "host": "B",
+     "text": "沒錯。然後天氣也在變。"
+    },
+    {
+     "host": "A",
+     "text": "東北季風對吧？"
+    },
+    {
+     "host": "B",
+     "text": "對，今天跟明天第一波增強，北部低溫大概20到23度。"
+    },
+    {
+     "host": "A",
+     "text": "那中南部呢？"
+    },
+    {
+     "host": "B",
+     "text": "中南部白天還是有29到31度。"
+    },
+    {
+     "host": "A",
+     "text": "真的假的，南北差這麼多？"
+    },
+    {
+     "host": "B",
+     "text": "對啊，一個穿外套，一個穿短袖。"
+    },
+    {
+     "host": "A",
+     "text": "哈哈，臺灣好神奇。"
+    },
+    {
+     "host": "B",
+     "text": "週四週五會回溫，週六第二波季風再來。"
+    },
+    {
+     "host": "A",
+     "text": "那颱風呢？薔琵終於走了吧？"
+    },
+    {
+     "host": "B",
+     "text": "走了，已經變成溫帶氣旋。"
+    },
+    {
+     "host": "A",
+     "text": "太好了，上週真的被它折騰很久。"
+    },
+    {
+     "host": "B",
+     "text": "另外有一個煙花颱風，但離臺灣4700多公里。"
+    },
+    {
+     "host": "A",
+     "text": "好遠，那應該不用擔心。"
+    },
+    {
+     "host": "B",
+     "text": "氣象署說未來一週不會影響臺灣。"
+    },
+    {
+     "host": "A",
+     "text": "接下來是高雄的消息。"
+    },
+    {
+     "host": "B",
+     "text": "嗯，這則是環團的行動。"
+    },
+    {
+     "host": "A",
+     "text": "是哪些團體？"
+    },
+    {
+     "host": "B",
+     "text": "南部反空汙大聯盟、森林城市協會等等，10月25日一起開記者會。"
+    },
+    {
+     "host": "A",
+     "text": "他們在講什麼？"
+    },
+    {
+     "host": "B",
+     "text": "他們說高雄一年有超過200天空氣品質不合格。"
+    },
+    {
+     "host": "A",
+     "text": "200天？那不就大半年了。"
+    },
+    {
+     "host": "B",
+     "text": "他們引用的數據是，細懸浮微粒年均17微克。"
+    },
+    {
+     "host": "A",
+     "text": "跟標準比起來呢？"
+    },
+    {
+     "host": "B",
+     "text": "超過世界衛生組織每日建議值的天數有210天。"
+    },
+    {
+     "host": "A",
+     "text": "哇，好可怕。"
+    },
+    {
+     "host": "B",
+     "text": "所以團體呼籲市長候選人簽一個承諾。"
+    },
+    {
+     "host": "A",
+     "text": "什麼承諾？"
+    },
+    {
+     "host": "B",
+     "text": "一年內空品沒改善，就不競選連任。"
+    },
+    {
+     "host": "A",
+     "text": "哇，這個很硬耶。"
+    },
+    {
+     "host": "B",
+     "text": "對啊，而且他們也主張保留橋頭糖廠的森林。"
+    },
+    {
+     "host": "A",
+     "text": "這跟調適有關嗎？"
+    },
+    {
+     "host": "B",
+     "text": "有喔，森林城市協會認為城市裡可以留住一片森林。"
+    },
+    {
+     "host": "A",
+     "text": "樹多一點，夏天也比較涼。"
+    },
+    {
+     "host": "B",
+     "text": "對，綠蔭本來就是城市降溫的重要工具。"
+    },
+    {
+     "host": "A",
+     "text": "他們什麼時候公布誰有簽？"
+    },
+    {
+     "host": "B",
+     "text": "團體說11月8日會公布。"
+    },
+    {
+     "host": "A",
+     "text": "好，我們到時候再追。"
+    },
+    {
+     "host": "B",
+     "text": "接著來看國際新聞！"
+    },
+    {
+     "host": "A",
+     "text": "你剛說歐洲熱死5萬人，是真的嗎？"
+    },
+    {
+     "host": "B",
+     "text": "是一份研究估計的，會登在自然健康期刊。"
+    },
+    {
+     "host": "A",
+     "text": "誰做的？"
+    },
+    {
+     "host": "B",
+     "text": "倫敦帝國學院跟倫敦衛生與熱帶醫學院的科學家。"
+    },
+    {
+     "host": "A",
+     "text": "他們算了多少城市？"
+    },
+    {
+     "host": "B",
+     "text": "854個歐洲城市，今年夏天超過5萬人因熱提早死亡。"
+    },
+    {
+     "host": "A",
+     "text": "比以前多很多嗎？"
+    },
+    {
+     "host": "B",
+     "text": "比2022年的紀錄高了71%。"
+    },
+    {
+     "host": "A",
+     "text": "天啊，2022年已經很熱了耶。"
+    },
+    {
+     "host": "B",
+     "text": "而且大約三分之二，算是人為氣候變遷造成的。"
+    },
+    {
+     "host": "A",
+     "text": "也就是3萬多人。"
+    },
+    {
+     "host": "B",
+     "text": "對，大約3萬2千人。"
+    },
+    {
+     "host": "A",
+     "text": "好沉重。那有人提出要怎麼辦嗎？"
+    },
+    {
+     "host": "B",
+     "text": "歐洲綠黨呼籲歐盟跟各國政府，要有系統地準備。"
+    },
+    {
+     "host": "A",
+     "text": "具體是什麼？"
+    },
+    {
+     "host": "B",
+     "text": "像是讓城市和鄉村準備好面對極端天氣。"
+    },
+    {
+     "host": "A",
+     "text": "還有呢？"
+    },
+    {
+     "host": "B",
+     "text": "還有讓大家負擔得起，把家裡維持涼爽。"
+    },
+    {
+     "host": "A",
+     "text": "這點臺灣也很需要，電費也是一種門檻。"
+    },
+    {
+     "host": "B",
+     "text": "對啊。下一則是尼泊爾。"
+    },
+    {
+     "host": "A",
+     "text": "上週不是才講過損失與損害基金？"
+    },
+    {
+     "host": "B",
+     "text": "對，這次是另一個，調適基金。"
+    },
+    {
+     "host": "A",
+     "text": "它做了什麼？"
+    },
+    {
+     "host": "B",
+     "text": "理事會通過了3個跟尼泊爾有關的提案階段。"
+    },
+    {
+     "host": "A",
+     "text": "有哪些？"
+    },
+    {
+     "host": "B",
+     "text": "一個是用自然解方保護柯西河流域，大約990萬美元。"
+    },
+    {
+     "host": "A",
+     "text": "嗯嗯。"
+    },
+    {
+     "host": "B",
+     "text": "一個是聯合國人居署在藍毘尼省，大約500萬美元。"
+    },
+    {
+     "host": "A",
+     "text": "還有一個呢？"
+    },
+    {
+     "host": "B",
+     "text": "最大的是喜馬拉雅地區的洪水和山崩預警系統。"
+    },
+    {
+     "host": "A",
+     "text": "多大？"
+    },
+    {
+     "host": "B",
+     "text": "初步構想提案規模3億美元。"
+    },
+    {
+     "host": "A",
+     "text": "哇，那是很大一筆。"
+    },
+    {
+     "host": "B",
+     "text": "不過這還是前期構想，不是馬上撥款喔。"
+    },
+    {
+     "host": "A",
+     "text": "了解，預警系統真的很關鍵。"
+    },
+    {
+     "host": "B",
+     "text": "最後快速看一下各地的豪雨。"
+    },
+    {
+     "host": "A",
+     "text": "好啊。"
+    },
+    {
+     "host": "B",
+     "text": "日本，原本的颱風30號變成低氣壓，26日從九州到關東都有激烈降雨。"
+    },
+    {
+     "host": "A",
+     "text": "日本最近天氣也好亂。"
+    },
+    {
+     "host": "B",
+     "text": "泰國普吉島25日也淹水，好幾條路車子過不去。"
+    },
+    {
+     "host": "A",
+     "text": "去玩的人要小心了。"
+    },
+    {
+     "host": "B",
+     "text": "墨西哥太平洋岸，萬斯颶風減弱成熱帶風暴，但局部雨量可能到17公分。"
+    },
+    {
+     "host": "A",
+     "text": "那會有土石流的風險吧？"
+    },
+    {
+     "host": "B",
+     "text": "對，美國颶風中心也提醒要防淹水和土石流。"
+    },
+    {
+     "host": "A",
+     "text": "好，那來講講對臺灣城市的啟示。"
+    },
+    {
+     "host": "B",
+     "text": "我先說。我覺得大潮加上颱風或豪雨，是沿海最怕的組合。"
+    },
+    {
+     "host": "A",
+     "text": "所以要怎麼做？"
+    },
+    {
+     "host": "B",
+     "text": "堤防、抽水站之外，要提早發布大潮預警，讓居民知道。"
+    },
+    {
+     "host": "A",
+     "text": "我的想法是歐洲那個熱死亡研究。"
+    },
+    {
+     "host": "B",
+     "text": "嗯，你怎麼看？"
+    },
+    {
+     "host": "A",
+     "text": "臺灣也要把高溫當成健康風險，像涼適點、行道樹要一起推。"
+    },
+    {
+     "host": "B",
+     "text": "還有幫弱勢家庭負擔冷氣電費。"
+    },
+    {
+     "host": "A",
+     "text": "對，降溫不能只有有錢人做得到。"
+    },
+    {
+     "host": "B",
+     "text": "好，今天就聊到這裡！"
+    },
+    {
+     "host": "A",
+     "text": "這禮拜早晚溫差大，記得帶件外套。"
+    },
+    {
+     "host": "B",
+     "text": "住海邊的朋友也要注意潮水喔。"
+    },
+    {
+     "host": "A",
+     "text": "我們明天見，掰掰！"
+    },
+    {
+     "host": "B",
+     "text": "掰掰！"
+    }
+   ],
+   "sources": [
+    {
+     "title": "薔琵遠離！今各地多雲到晴 2波東北季風接力、沿海慎防海水倒灌",
+     "outlet": "壹蘋新聞網",
+     "date": "2026/10/26",
+     "url": "https://news.nextapple.com/life/20261026/C325AA7BAC464934CA4F6C21BBA56450"
+    },
+    {
+     "title": "10/26天氣預報》收假日南北兩樣情！中南部飆33度、北東雲多偶雨",
+     "outlet": "NOWnews",
+     "date": "2026/10/26",
+     "url": "https://www.nownews.com/news/6886506"
+    },
+    {
+     "title": "高雄每年逾200天空品不合格 環團喊話新市長：沒達標不連任",
+     "outlet": "中時新聞網",
+     "date": "2026/10/25",
+     "url": "https://www.chinatimes.com/realtimenews/20261025001569-260407"
+    },
+    {
+     "title": "Europe's hottest summer ever was also its deadliest by far",
+     "outlet": "Grist",
+     "date": "2026/10/22",
+     "url": "https://grist.org/extreme-heat/europes-hottest-summer-ever-was-also-its-deadliest-by-far/"
+    },
+    {
+     "title": "European governments need to prepare systematically for scorching summers ahead",
+     "outlet": "SustainabilityOnline",
+     "date": "2026/10/26",
+     "url": "https://sustainabilityonline.net/news/european-governments-need-to-prepare-systematically-for-scorching-summers-ahead/"
+    },
+    {
+     "title": "Adaptation Fund approves three climate adaptation projects for Nepal",
+     "outlet": "Khabarhub",
+     "date": "2026/10/24",
+     "url": "https://english.khabarhub.com/2026/24/573015/"
+    },
+    {
+     "title": "元台風30号が西日本へ 今日26日は関東～九州で激しい雨",
+     "outlet": "tenki.jp",
+     "date": "2026/10/26",
+     "url": "https://tenki.jp/forecaster/y_nakagawa/2026/10/26/41093.html"
+    },
+    {
+     "title": "Phuket flooding disrupts travel in 3 districts on October 25",
+     "outlet": "The Nation Thailand",
+     "date": "2026/10/25",
+     "url": "https://www.nationthailand.com/news/general/40072723"
+    },
+    {
+     "title": "Vance no longer a hurricane but as a tropical storm still threatens Mexico's Pacific coast",
+     "outlet": "AP／ClickOrlando",
+     "date": "2026/10/25",
+     "url": "https://www.clickorlando.com/news/national/2026/10/25/vance-no-longer-a-hurricane-but-as-a-tropical-storm-still-threatens-mexicos-pacific-coast/"
+    },
+    {
+     "title": "颱風加大潮 雲林以南沿海海水倒灌",
+     "outlet": "公視新聞網",
+     "date": "2023/8/31",
+     "url": "https://news.pts.org.tw/article/654214"
+    }
+   ],
+   "duration": 354,
+   "id": "20261027",
+   "audio": "audio/climate-podcast-20261027.mp3"
+  },
+  {
    "date": "2026-10-24",
    "title": "薔琵遠離留下1死527傷、臺南試辦高溫保險、歐銀加碼調適",
    "pilot": false,
